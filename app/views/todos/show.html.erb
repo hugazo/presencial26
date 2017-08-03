@@ -1,0 +1,5 @@
+<div class="well">
+  <p> <%= @todo.description %> </p>
+  <p> <%= @todo.completed %> </p>
+  <p> <%= time_ago_in_words @todo.created_at %> </p>
+</div>

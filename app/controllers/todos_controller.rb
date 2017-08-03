@@ -13,6 +13,10 @@ class TodosController < ApplicationController
     redirect_to todos_path
   end
 
+  def show
+    @todo = Todo.find(params[:id])
+  end
+
   private
 
   def todos_params
