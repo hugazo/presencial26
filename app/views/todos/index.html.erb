@@ -8,5 +8,6 @@
     <p> <%= todo.description %> </p>
     <p> <%= todo.completed %> </p>
     <p> <%= link_to "Mostrar", todo %> </p>
+    <p> <%= link_to "Editar", todo_edit_path(todo) %> </p>
   </div>
 <% end %>
