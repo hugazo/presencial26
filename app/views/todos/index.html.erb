@@ -10,5 +10,6 @@
     <p> <%= link_to "Mostrar", todo %> </p>
     <p> <%= link_to "Editar", todo_edit_path(todo) %> </p>
     <p> <%= link_to "Borrar", todo, method: :delete, data: { confirm: 'Seguro?' } %> </p>
+    <p> <%= link_to "Completar", todo_complete_path(todo) %> </p>
   </div>
 <% end %>
