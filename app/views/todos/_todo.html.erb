@@ -1,0 +1,30 @@
+<% @todos.each do |todo| %>
+<div class="row">
+  <div class="container">
+    <div class="well well-lg">
+      <div class="col-md-5">
+        <div class="col-md-9">
+          <%= todo.description %>
+        </div>
+        <div class="col-md-3">
+          <%= todo.completed %>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="col-md-3">
+          <%= link_to "Mostrar", todo %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to "Editar", todo_edit_path(todo) %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to "Borrar", todo, method: :delete, data: { confirm: 'Seguro?' } %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to "Completar", todo_complete_path(todo) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

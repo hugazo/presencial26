@@ -1,15 +1,8 @@
 <div class="row">
-  <div class="well">
-    <%= link_to "Crear nuevo ToDo", todos_new_path %>
+  <div class="container">
+    <div class="well">
+      <%= link_to "Crear nuevo ToDo", todos_new_path %>
+    </div>
   </div>
 </div>
-<% @todos.each do |todo| %>
-  <div class="well">
-    <p> <%= todo.description %> </p>
-    <p> <%= todo.completed %> </p>
-    <p> <%= link_to "Mostrar", todo %> </p>
-    <p> <%= link_to "Editar", todo_edit_path(todo) %> </p>
-    <p> <%= link_to "Borrar", todo, method: :delete, data: { confirm: 'Seguro?' } %> </p>
-    <p> <%= link_to "Completar", todo_complete_path(todo) %> </p>
-  </div>
-<% end %>
+<%= render 'todo' %>

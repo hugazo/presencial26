@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'todos#index'
+  get 'todos/list', to: 'todos#list'
   get 'todos', to: 'todos#index'
   get 'todos/new'
   post 'todos', to: 'todos#create'
