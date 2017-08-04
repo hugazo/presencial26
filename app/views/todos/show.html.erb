@@ -1,5 +1,9 @@
-<div class="well">
-  <p> <%= @todo.description %> </p>
-  <p> <%= @todo.completed %> </p>
-  <p> <%= time_ago_in_words @todo.created_at %> </p>
+<div class="row">
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <div class="col-md-4 text-center"><h4> Tarea: <%= @todo.description %> </h4></div>
+      <div class="col-md-4 text-center"><h4> Completado? <%= render 'ticker', todo: @todo %></h4></div>
+      <div class="col-md-4 text-center"><h4>Creado hace <%= time_ago_in_words @todo.created_at %> </h4></div>
+    </div>
+  </div>
 </div>
