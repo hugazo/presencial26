@@ -1,0 +1,5 @@
+<% if todo.completed %>
+  <%= content_tag(:span, '', class: ["glyphicon", "glyphicon-ok"], 'aria-hidden': "true") %>
+<% else %>
+  <%= content_tag(:span, '', class: ["glyphicon", "glyphicon-remove"], 'aria-hidden': "true") %>
+<% end %>

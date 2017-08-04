@@ -7,7 +7,7 @@
           <%= todo.description %>
         </div>
         <div class="col-md-3">
-          <%= todo.completed %>
+          <%= render 'ticker', todo: todo %>
         </div>
       </div>
       <div class="col-md-7">
@@ -21,7 +21,7 @@
           <%= link_to "Borrar", todo, method: :delete, data: { confirm: 'Seguro?' } %>
         </div>
         <div class="col-md-3">
-          <%= link_to "Completar", todo_complete_path(todo) %>
+          <%= render 'button_complete', todo: todo %>
         </div>
       </div>
     </div>
